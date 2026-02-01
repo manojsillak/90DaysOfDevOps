@@ -38,8 +38,15 @@ Handling system states (boot, shutdown, reboot)
 The PID(processId) for systemd is 1 by default.
 
 **Few basic process commands:**
-ps : to check the realtime running processess
-top : to check detailed info about the running processess.
+ps : to check the realtime running processes.
+top : to check detailed info about the running processes.
+
+**Process types:** 
+Running process(R): the process that is currecntly in running on cpu and can be check using ps or top command.
+Sleeping process(S): process is waiting for an event, user input, disk space or network response.
+Uninterruptible Sleep (D): can not be interupted or kill easily.Many D state processes usually indicate storage or network problems.
+Zombie (Z): process has finished the execution but not exited.consuming no cpu/memory but still has pid.
+ps aux | grep Z
 
 systemd commands:
 systemctl start nginx:start nginx
