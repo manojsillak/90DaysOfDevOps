@@ -27,7 +27,8 @@ The shell communicates with the kernel using system libraries and system calls.
 
 
 **Linux Processess:**
-init / systemd: 
+init / systemd: it is the very 1st process started during the boot.systemd is the init system.
+Starts system services (network, ssh, nginx, docker) and can do Start / stop / restart services.
 systemd is responsible for:
 Starting system services (network, ssh, cron, etc.)
 Managing service dependencies
